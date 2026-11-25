@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, black, black, darkblue, yellow, darkblue, black, black);
+
+
+}
+
+.theme-buttons {
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.theme-buttons button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    background-color: black;
+    color: yellow;
+    cursor: pointer;
+}
+
+.card {
+    width: 300px;
+    padding: 15px;
+    background-color: black;
+    color: yellow;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}
+
+.profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid yellow;
+    object-fit: cover;
+}
+
+.profile-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark-image {
+    display: inline-block;
+}
+
+.light-image {
+    display: none;
+}
+
+.card h1 {
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #C4CBD6;
+}
+
+.bio a {
+    color: yellow;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: yellow;
+    color: #080B12;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.social-links {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid yellow;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+    object-fit: contain;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+
+
+body.light-mode {
+    background: linear-gradient(120deg, white, #0052B4, #0052B4, #D80027, #0052B4, #0052B4, white);
+}
+
+
+
+body.light-mode .card {
+    background-color: #D5DBDB;
+    color: #123B70;
+}
+
+
+
+body.light-mode .bio {
+    color: red;
+}
+
+
+
+body.light-mode .bio a {
+    color: #123B70;
+}
+
+
+
+body.light-mode .contact-button {
+    background-color: red;
+    color: #123B70;
+}
+
+
+
+body.light-mode .social-links {
+    border-top: 1px solid #123B70;
+}
+
+
+
+
+body.light-mode .theme-buttons button {
+    background-color: #D5DBDB;
+    color: #123B70;
+    border: 2px solid #D5DBDB;
+}
+
+
+body:not(.light-mode) .theme-buttons button {
+    background-color: black;
+    color: yellow;
+    border: 2px solid black;
+}
+
+
+.light-image {
+    display: none;
+}
+
+
+body.light-mode #profile-pic {
+    display: none;
+}
+
+body.light-mode .light-image {
+    display: block;
+}
+
+
+body.light-mode .profile-image img {
+    border: 4px solid #C62828;
+}
+
+
+
+body.light-mode .social-links img {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(90%) saturate(1800%) hue-rotate(195deg) brightness(85%);
+}
